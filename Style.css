@@ -1,0 +1,191 @@
+* {
+  margin: 0; /* tira margens */
+  padding: 0; /* tira padding */
+  box-sizing: border-box; /* largura inclui padding e borda */
+}
+
+.header {
+  margin: 0;
+  text-align: center; /* centraliza texto */
+}
+
+.header_h1 {
+  margin: 0; 
+  font-size: 24px;
+}
+.header_p {
+  margin: 5px 0 0; 
+  font-size: 16px;
+}
+
+/* cores e imagens */
+:root {
+  --text-color: white;
+  --bg-url: url(./Assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(255, 255, 255, 0.05);
+  --highlight-color: rgba(255, 255, 255, 0.02);
+  --switch-bg-url: url(./Assets/moon-stars.svg);
+}
+/* 
+  Quando o body recebe a classe .light,
+  as variáveis mudam para o tema claro
+*/
+
+.light {
+  --text-color: black;
+  --bg-url: url(./Assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./Assets/sun.svg);
+}
+
+body {
+  
+  background: var(--bg-url) no-repeat top center/cover; /* Fundo da página */
+  min-height: 100vh; /* Defino a altura minima pra tela */
+  /*Sem altura maxima assim sempre acompanha o scroll, tem um acompanhar de outra forma*/
+  grid-template-rows: 1fr auto;
+  
+}
+
+body * {
+  font-family: "Inter", sans-serif; 
+  color: var(--text-color);
+}
+
+.sub_ul{
+  margin-left: 20px;
+  list-style-type: circle;
+}
+
+#Container {
+  width: 100%; 
+  max-width: 588px;
+  margin: 56px auto 0; 
+  padding: 0 24px;
+}
+
+#Profile {
+  text-align: center; 
+  padding: 24px;
+}
+#Profile img {
+  width: 112px; 
+  margin: auto; 
+  display: block; 
+}
+#Profile p {
+  font-weight: 500; 
+  line-height: 24px;
+}
+
+/* botão tema */
+#switch {
+  position: relative; 
+  width: 64px; 
+  margin: 4px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  border: 0; 
+  border-radius: 50%; 
+  background: white var(--switch-bg-url) no-repeat center; 
+  top: 50%;
+  left: 0;
+  position: absolute;
+  z-index: 1; 
+  transform: translateY(-50%);
+}
+
+.light #switch button {
+  right: 0; 
+  left: initial; 
+}
+
+#switch span {
+  display: block;
+  width: 64px; 
+  height: 24px; 
+  border: 1px solid var(--stroke-color);
+  border-radius: 9999px; 
+  backdrop-filter: blur(4px);
+  background: var(--surface-color); 
+  position: relative;
+}
+
+ul.desc{
+  list-style-type: disc; 
+  padding: 20px;
+}
+
+/* lista de links */
+._ul {
+  list-style: none;
+  gap: 16px; 
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0; 
+}
+
+.ul_li_a {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  padding: 16px 24px; 
+  background: var(--surface-color); 
+  border: 1px solid var(--stroke-color); 
+  border-radius: 8px; 
+  backdrop-filter: blur(4px); 
+  -webkit-backdrop-filter: blur(4px); 
+  text-decoration: none;
+  font-weight: 400;
+  transition: background 0.5s;
+}
+
+.ul_li_a:hover {
+  background: var(--surface-color-hover); 
+  backdrop-filter: blur(4px);
+  border: 1.5px solid #fff; 
+}
+
+#social-links {
+  display: flex;
+  justify-content: center; 
+  padding: 24px 0; 
+  font-size: 24px; 
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+#social-links a:hover {
+  background: var(--highlight-color);
+}
+
+footer {
+  text-align: center; 
+  padding: 24px 0; 
+  font-size: 14px; 
+}
+
+/* fundo desktop */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+} 

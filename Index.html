@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="light">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projetinho</title>
+    <link rel="stylesheet" href="./Style.css" /> <!-- Informa onde as pastas vem-->
+  </head>
+  <body>
+    <header class = "header">
+      <h1 class="header_h1">Matheus Albertini</h1>
+      <p class="header_p">Analista de Suporte Jr | Manutenção de Sistemas</p>
+    </header>
+	
+    <div id="Container">
+      <div id="Profile">
+        <img
+          src="./Assets/Avatar.png"
+          alt="Albertini barbudo  sorrindo, camiseta cinza em um fundo branco "/> <!--Decrição comica para quando passar o mouse por cima-->
+        <p>Analista de Suporte Júnior com experiência em identificação e correção de bugs</p>
+      </div>
+      <div>
+        <div id="switch" onclick="toggleMode()"> <!-- Quando for clicado para onde ele deve ir-->
+          <button></button>
+          <span></span>
+        </div>
+      </div>
+      <ul class="_ul">
+        <li>
+          <a class="ul_li_a"
+            target="_blank"
+            href="ExpProf.html">
+            Experiencias Profissionais
+          </a>
+        </li>
+        <li>
+          <a class="ul_li_a" href="Comp.html" target="_blank">Competencias & Cursos</a>
+        </li>
+        <li>
+          <a class="ul_li_a" href="mailto:matheus.v.albertini@gmail.com" ?subject="Fala comigo">
+            E-mail</a>
+        </li>
+        <li>
+          <a  class="ul_li_a"  href="https://api.whatsapp.com/" target="_blank">Whatsapp</a>
+        </li>
+      </ul>
+      <div id="social-links">
+        <a href="https://github.com/M-Albertini" target="_blank">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+        <a href="https://www.instagram.com/matheus.albertini/" target="_blank">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="#">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </a>
+        <a href="http://www.linkedin.com/in/matheusvalbertini" target="_blank">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+
+      </div>
+      <footer>Feito com ♥ Por Mts_Albertini com ajuda da <a href="https://app.rocketseat.com.br/classroom/discover-primeiros-passos" target="_blank">Rocketseat</a></footer>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js">
+    </script>
+    <script src="./Script.js"></script>
+  </body>
+</html>
